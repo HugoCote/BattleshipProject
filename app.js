@@ -487,8 +487,9 @@ function targetSquare(square) {
 async function userClickBoardgame(boardgame) {
     let userInput = new Promise(resolve => {
         boardgame.addEventListener('turn', (event) => {
-            // "explosion.ogg"
-            new Audio("media/explosion.ogg").play();
+            new Audio("./media/explosion.ogg").play().catch((e) => {
+                console.log("Can't read audio! " + e)
+            });
             resolve(event.detail.coordinates);
         }, options = { once: true });
     })
