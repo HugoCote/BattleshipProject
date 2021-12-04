@@ -1,6 +1,6 @@
 # BattleshipProject
 
-BattleShip project from [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/battleship), test it [here]().
+BattleShip project from [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/battleship), test it [here](https://hugocote.github.io/BattleshipProject/).
 
 ## TODO
 
