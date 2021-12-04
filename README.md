@@ -4,6 +4,6 @@ BattleShip project from [The Odin Project](https://www.theodinproject.com/paths/
 
 ## TODO
 
-- [] Use wepback
-- [] Multiple source files
-- [] Tests for the graphical interface
+- [ ] Use wepback
+- [ ] Multiple source files
+- [ ] Tests for the graphical interface
