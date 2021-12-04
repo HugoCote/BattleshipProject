@@ -426,11 +426,6 @@ function makeGrid(newGridSize, enableDragAndDrop) {
     return newGrid;
 }
 
-function suddenSpawnAudio() {
-    const audioDiv = document.getElementById("dashboard-audio")
-    "Soundtrack_24_-_Das_Boot_Theme.webm.part";
-}
-
 function updateGrid(grid, boardgame, { hidden } = { hidden: false }) {
     const boatTiles = Object.keys(boardgame.tiles);
     const hitTiles = boardgame.hits;
@@ -486,10 +481,12 @@ function targetSquare(square) {
 
 async function userClickBoardgame(boardgame) {
     let userInput = new Promise(resolve => {
-        boardgame.addEventListener('turn', (event) => {
-            new Audio("./media/explosion.ogg").play().catch((e) => {
-                console.log("Can't read audio! " + e)
-            });
+        boardgame.addEventListener('turn', async (event) => {
+            let audioShotFired = new Audio("./media/explosion.ogg");
+            audioShotFired.load();
+            try {
+                await audioShotFired.play();
+            } catch (e) { console.log("Cant play audio for shot fired! " + e); }
             resolve(event.detail.coordinates);
         }, options = { once: true });
     })
