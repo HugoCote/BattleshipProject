@@ -18,6 +18,27 @@
     --site-font-family: 'Syne Mono', monospace;
 }
 
+.material-icons.md-18 {
+    font-family: 'Material Icons';
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-family: 'Material Icons';
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-family: 'Material Icons';
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-family: 'Material Icons';
+    font-size: 48px;
+}
+
+
 body {
     margin: 0px;
     width: 100vw;
@@ -97,17 +118,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 48px; */
-    /* height: 48px; */
-    /* border-radius: 50%; */
-    /* border: 1px solid rgb(48, 46, 46); */
-    /* background: green; */
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     background: inherit;
-    border: none;
+    /* border: none; */
+    border: 2px solid transparent;
     font-size: 48px;
     color: inherit;
-    transform: rotate(-270deg);
-    /* transform: rotate(-180deg); */
     transition-duration: 500ms;
 }
 
@@ -117,8 +135,10 @@ button#reload:disabled, button#reload:disabled+label {
 }
 
 #reload:hover {
-    /* transform: rotate(180deg); */
-    transform: rotate(-120deg);
+    border: 2px solid var(--background-color-darker);
+    background: var(--text-color-lighter);
+    color: var(--background-color-darker);
+    transform: rotate(270deg);
     transition-duration: 500ms;
     cursor: pointer;
 }
