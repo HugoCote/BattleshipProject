@@ -1,2 +1,3 @@
-media
+media/*
+!media/explosion.ogg
 node_modules
