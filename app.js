@@ -278,6 +278,8 @@ class Game {
 // ############################################
 
 let currentBoatSelectedForDragAndDrop = null;
+let audioShotFired = new Audio("./media/explosion.ogg");
+audioShotFired.load();
 
 function boatDragStart() {
     setTimeout(() => this.classList.add("invisible"), 50);
@@ -482,11 +484,9 @@ function targetSquare(square) {
 async function userClickBoardgame(boardgame) {
     let userInput = new Promise(resolve => {
         boardgame.addEventListener('turn', async (event) => {
-            try {
-                let audioShotFired = new Audio("./media/explosion.ogg");
-                // audioShotFired.load();
-                // await audioShotFired.play();
-            } catch (e) { console.log("Cant play audio for shot fired! " + e); }
+            audioShotFired.pause();
+            audioShotFired.currentTime = 0;
+            audioShotFired.play().catch(e => console.log("Cant play audio for shot fired! " + e))
             resolve(event.detail.coordinates);
         }, options = { once: true });
     })
