@@ -4,6 +4,7 @@ BattleShip project from [The Odin Project](https://www.theodinproject.com/paths/
 
 ## TODO
 
+- [ ] Use Open Graph metadata
 - [ ] Use wepback
 - [ ] Multiple source files
 - [ ] Tests for the graphical interface

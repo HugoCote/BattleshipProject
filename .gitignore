@@ -1,3 +1,4 @@
 media/*
 !media/explosion.ogg
+!media/galleon_fitted_small.png
 node_modules

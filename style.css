@@ -47,6 +47,7 @@ body {
     background: var(--background-color);
     color: var(--text-color);
     font-family: var(--site-font-family);
+    font-variant: small-caps;
     overflow-y: hidden;
 }
 
@@ -98,6 +99,7 @@ body {
     font-weight: bold;
     color: var(--text-color-lighter);
     font-family: var(--title-font-family);
+    font-variant: normal;
 }
 
 .message-board {
