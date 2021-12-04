@@ -482,10 +482,10 @@ function targetSquare(square) {
 async function userClickBoardgame(boardgame) {
     let userInput = new Promise(resolve => {
         boardgame.addEventListener('turn', async (event) => {
-            let audioShotFired = new Audio("./media/explosion.ogg");
-            audioShotFired.load();
             try {
-                await audioShotFired.play();
+                let audioShotFired = new Audio("./media/explosion.ogg");
+                // audioShotFired.load();
+                // await audioShotFired.play();
             } catch (e) { console.log("Cant play audio for shot fired! " + e); }
             resolve(event.detail.coordinates);
         }, options = { once: true });
